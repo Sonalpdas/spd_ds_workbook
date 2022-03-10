@@ -7,7 +7,7 @@ package cracking_the_coding_interview.one.one;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Main {
+public class PracticeProblem1 {
 
     public static boolean isUniqueString(String word){
 
