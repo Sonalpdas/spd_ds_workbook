@@ -62,5 +62,14 @@ public class PracticeProblem3 {
         System.out.println(urlIfy(test2.toCharArray(), 14));
     }
 
+    /*
+    Key Takeaways:
+    1. Java Strings are immutable
+    2. String concatenations in Java is expensive, as every concatenation is equivalent to creating new string object.
+    3. Recommended concatenation is to use StringBuilder or StringBuffer
+    4. Convert Char array to string by creating a new String object
+    5. '\0' signifies end of String.
+     */
+
 
 }
