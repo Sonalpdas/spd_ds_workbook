@@ -57,4 +57,11 @@ public class PracticeProblem4 {
         System.out.println(isPalindromePermutation("Tact $  Coa"));
     }
 
+    /*
+    Key Takeaways:
+    1. To check if a char is letter use in-build function Character.isLetter()
+    2. HashMap getOrDefault()
+    3. Character.getNumericValue()
+     */
+
 }
