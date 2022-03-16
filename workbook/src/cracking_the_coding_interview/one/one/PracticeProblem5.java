@@ -50,6 +50,44 @@ public class PracticeProblem5 {
         return true;
     }
 
+    public static boolean isOneEditAwayOptimized(String str1, String str2){
+
+        // Case 1: When length diff > 2, return false
+        int lengthDiff = Math.abs(str1.length()-str2.length());
+        if(lengthDiff > 2) return false;
+
+        // Case 2: If lengthDiff < 2
+        // Find short and long string
+        String s1 = str1.length() < str2.length() ? str1 : str2;
+        String s2 = str1.length() < str2.length() ? str2 : str1;
+
+        // Compare string chars
+        int idx1 = 0, idx2 = 0;
+        boolean isCharDfferent = false;
+        while(idx1 < s1.length() && idx2 < s2.length()){
+
+            if(s1.charAt(idx1) != s2.charAt(idx2)){
+
+                if(isCharDfferent) return false;
+                isCharDfferent = true;
+
+                if(s1.length() == s2.length()){
+                    // In case string lengths are same its replace type edit
+                    // Increase short string index
+                    idx1++;
+                }
+
+            }else{
+                // When both chars same
+                idx1++;
+            }
+
+            idx2++; // Always move index for longer string
+        }
+        return true;
+
+    }
+
     public static void main(String[] args) {
 
         System.out.println(isOneEditAway("pale", "ple"));
@@ -57,6 +95,19 @@ public class PracticeProblem5 {
         System.out.println(isOneEditAway("pale", "bale"));
         System.out.println(isOneEditAway("pale", "bake"));
 
+        System.out.println(isOneEditAwayOptimized("pale", "ple"));
+        System.out.println(isOneEditAwayOptimized("pales", "pale"));
+        System.out.println(isOneEditAwayOptimized("pale", "bale"));
+        System.out.println(isOneEditAwayOptimized("pale", "bake"));
+
     }
+
+    /*
+    Key Takeaways:
+    1. Pointers help with String comparisons
+    2. In these kinds of problems, identifying activities and their logic
+    before writing code helps optimize solution and sheds clarity on the
+    required logic and edge cases.
+     */
 
 }
