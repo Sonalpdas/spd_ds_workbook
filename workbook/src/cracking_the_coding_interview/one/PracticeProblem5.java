@@ -1,4 +1,4 @@
-package cracking_the_coding_interview.one.one;
+package cracking_the_coding_interview.one;
 
 /*
 One Away: There are three types of edits that can be performed on strings:
