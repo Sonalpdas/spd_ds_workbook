@@ -1,4 +1,4 @@
-package cracking_the_coding_interview.one.one;
+package cracking_the_coding_interview.one;
 
 /*  Palindrome Permutation: Given a string, write a function to check if it
 is a permutation of a palindrome. A palindrome is a word or phrase that is

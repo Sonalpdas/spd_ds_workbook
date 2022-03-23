@@ -1,4 +1,4 @@
-package cracking_the_coding_interview.one.one;
+package cracking_the_coding_interview.one;
 
 // Problem: Is Unique
 // Implement an algorithm to determine if a string has all unique characters.

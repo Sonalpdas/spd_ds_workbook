@@ -1,4 +1,4 @@
-package cracking_the_coding_interview.one.one;
+package cracking_the_coding_interview.one;
 
 // Problem: Check Permutation
 /* Given two strings, write a method to decide if one is a permutation of the other  */
