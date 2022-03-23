@@ -62,7 +62,6 @@ public class PracticeProblem3 {
         System.out.println(urlIfy(test2.toCharArray(), 14));
     }
 
-<<<<<<< HEAD
     /*
     Key Takeaways:
     1. Java Strings are immutable
@@ -72,7 +71,5 @@ public class PracticeProblem3 {
     5. '\0' signifies end of String.
      */
 
-=======
->>>>>>> 2ad4102 (Added CTCL 1.3)
 
 }
