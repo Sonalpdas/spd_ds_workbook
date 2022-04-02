@@ -10,6 +10,18 @@ public class WeatherData implements Subject{
     private float humidity;
     private float pressure;
 
+    public float getTemperature(){
+        return this.temperature;
+    }
+
+    public float getHumidity(){
+        return this.humidity;
+    }
+
+    public float getPressure(){
+        return this.pressure;
+    }
+
     public WeatherData() {
         observers = new ArrayList<Observer>();
     }
@@ -22,14 +34,15 @@ public class WeatherData implements Subject{
         observers.remove(o);
     }
 
-    public void notifyObserver(){
+    public void notifyObservers(){
         for(Observer observer: observers){
-            observer.update(temperature, humidity, pressure);
+//            observer.update(temperature, humidity, pressure); // Calling update from observer interface w parameter - push method
+            observer.update(); // Calling update from observer interface w/o parameter - pull method
         }
     }
 
     public void measurementsChanged(){
-        notifyObserver();
+        notifyObservers();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure){
